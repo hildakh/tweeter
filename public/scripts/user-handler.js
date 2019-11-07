@@ -1,17 +1,14 @@
 $(document).ready(function () {
 
   const $userHandler = $('#user-handler');
-  const $tweetContainer = $('.tweet-container');
+  const $alltweets = $('.all-tweets');
 
-  $tweetContainer.hover(
+  $alltweets.hover(
     function() {
       $userHandler.addClass('show');
     }, function() {
       $userHandler.removeClass('show');
     }
-
-
   );
-
 });
 

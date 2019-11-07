@@ -3,31 +3,31 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "This is just to see what we can see here! Alors, on va jeter un coup d'oeil et decider quoi faire ensuite 🤪"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@willie"
-    },
-    "content": {
-      "text": "Je pense , donc je suis!"
-    },
-    "created_at": 1461113959088
-  }
-]
+// const data = [
+//   {
+//     "user": {
+//       "name": "Newton",
+//       "avatars": "https://i.imgur.com/73hZDYK.png"
+//       ,
+//       "handle": "@SirIsaac"
+//     },
+//     "content": {
+//       "text": "This is just to see what we can see here! Alors, on va jeter un coup d'oeil et decider quoi faire ensuite 🤪"
+//     },
+//     "created_at": 1461116232227
+//   },
+//   {
+//     "user": {
+//       "name": "Descartes",
+//       "avatars": "https://i.imgur.com/nlhLi3I.png",
+//       "handle": "@willie"
+//     },
+//     "content": {
+//       "text": "Je pense , donc je suis!"
+//     },
+//     "created_at": 1461113959088
+//   }
+// ]
 
 const createTweetElement = function $(tweetObject) {
   const markup =
@@ -51,7 +51,6 @@ const createTweetElement = function $(tweetObject) {
 </footer>
     </article>`
 
-
   return markup;
 }
 
@@ -61,23 +60,35 @@ const renderTweets = function (tweets) {
   // takes return value and appends it to the tweets container
   const $tweetContainer = $('.all-tweets');
   for (const user of tweets) {
-    $tweetContainer.append(createTweetElement(user));
+    $tweetContainer.prepend(createTweetElement(user));
   }
-
+}
+const loadTweets = function () {
+  $.ajax('/tweets', { method: 'GET' })
+    .then(function (data) {
+      renderTweets(data);
+    });
 }
 
 $(document).ready(function () {
-  renderTweets(data);
 
-  $('.button').submit(function (event) {
-    // alert(“Handler for .submit() called.“);
+  loadTweets();
+  $('#tweet-form').submit(function (event) {
     event.preventDefault();
-    $.ajax({
-      url: '/',
-      datatype: 'text',
-      data: $(this).serialize(),
-    }).then((response) => {
-      console.log(response);
+
+      const $userTweet = $('#tweet-box');
+      $dataReceived = $('#tweet-form').serialize();
+   
+      if ($dataReceived.val().length >= 140) {
+        alert(`Your tweet is too long and can't be posted!`);
+      } else if ($userTweet.val().length === 0) {
+        alert(`Did you forget to type your tweet?`);
+      } else {
+        $('.all-tweets').empty();
+        $.post('/tweets', $dataReceived, function (){
+          loadTweets();
+        });
+      }
     });
   });
-});
+

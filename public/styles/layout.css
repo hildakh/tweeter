@@ -18,8 +18,22 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Indie Flower', cursive, 'sans-serif';
+  position: relative;
+}
+  
+ main {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin: 0 auto;
+  width: 90%;
+  background-color: #f4f1ec;
+  margin-top: 1em;
+  /* text-align: center; */
+ }
+ .container {
+  position: absolute;
+  top: 520px;
+  margin-left: 4%;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */

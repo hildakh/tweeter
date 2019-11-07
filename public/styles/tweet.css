@@ -2,11 +2,10 @@
   border-style: solid;
   border-color: black;
   margin: 0 auto;
-  margin-top: 4.5em;
   height: 300px;
   position: relative;
   opacity: 0.5;
-  margin-bottom: 10em;
+  margin-top: 120px;
 }
 
 .tweet-container:hover {

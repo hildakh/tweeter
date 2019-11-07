@@ -29,7 +29,17 @@
 //   }
 // ]
 
+//To escape the script tweets that could be sent by users and wipe the innerhtml
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
+
 const createTweetElement = function $(tweetObject) {
+  //using the escape function to get only the innerhtml of the user input and pass it into the p tag
+  const $safeHtml = `<p id='tweet-text'>${escape(tweetObject.content.text)}</p>`;
   const markup =
     `<article class="tweet-container">
   <header class="tweet-header">
@@ -38,9 +48,9 @@ const createTweetElement = function $(tweetObject) {
   <p id="user-name">${tweetObject.user.name}</p>
   <p id="user-handler">${tweetObject.user.handle}</p>
   </header>
-    <p id="tweet-text">
-    ${tweetObject.content.text}
-  </p>
+    
+${$safeHtml}
+  
     <footer id="tweet-footer">
   <div id="icons">
     <i class="fas fa-flag"></i>
@@ -77,15 +87,15 @@ $(document).ready(function () {
     event.preventDefault();
 
       const $userTweet = $('#tweet-box');
-      $dataReceived = $('#tweet-form').serialize();
-   
-      if ($dataReceived.val().length >= 140) {
+      //Serialize gives a string
+      const dataReceived = $('#tweet-form').serialize();
+      if ($userTweet.val().length >= 140) {
         alert(`Your tweet is too long and can't be posted!`);
       } else if ($userTweet.val().length === 0) {
         alert(`Did you forget to type your tweet?`);
       } else {
         $('.all-tweets').empty();
-        $.post('/tweets', $dataReceived, function (){
+        $.post('/tweets', dataReceived, function (){
           loadTweets();
         });
       }

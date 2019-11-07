@@ -3,7 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
 const data = [
   {
     "user": {
@@ -21,34 +20,38 @@ const data = [
     "user": {
       "name": "Descartes",
       "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
+      "handle": "@willie"
     },
     "content": {
-      "text": "Je pense , donc je suis"
+      "text": "Je pense , donc je suis!"
     },
     "created_at": 1461113959088
   }
 ]
 
 const createTweetElement = function $(tweetObject) {
-  const markup = `<article class="tweet-container">
-      <header class="tweet-header">
-        <img src="${tweetObject.user.avatars}" alt="girl-avatar" class="tweet-avatar">
-        <p id="user-name">${tweetObject.user.name}</p>
-        <p id="user-handler">${tweetObject.user.handle}</p>
-      </header>
-      <p id="tweet-text">
-        ${tweetObject.content.text}
-      </p>
-      <footer id="tweet-footer">
-        <div id="icons">
-          <i class="fas fa-flag"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="fas fa-heart"></i>
-        </div>
-        <p id="time-stamp">${tweetObject.created_at}</p>
-      </footer>
+  const markup =
+    `<article class="tweet-container">
+  <header class="tweet-header">
+
+  <img src="${tweetObject.user.avatars}" alt="girl-avatar" class="tweet-avatar">
+  <p id="user-name">${tweetObject.user.name}</p>
+  <p id="user-handler">${tweetObject.user.handle}</p>
+  </header>
+    <p id="tweet-text">
+    ${tweetObject.content.text}
+  </p>
+    <footer id="tweet-footer">
+  <div id="icons">
+    <i class="fas fa-flag"></i>
+    <i class="fas fa-retweet"></i>
+    <i class="fas fa-heart"></i>
+  </div>
+  <p id="time-stamp">${tweetObject.created_at}</p>
+</footer>
     </article>`
+
+
   return markup;
 }
 
@@ -56,7 +59,7 @@ const renderTweets = function (tweets) {
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
-  const $tweetContainer = $('.tweet-container');
+  const $tweetContainer = $('.all-tweets');
   for (const user of tweets) {
     $tweetContainer.append(createTweetElement(user));
   }

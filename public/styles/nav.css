@@ -1,0 +1,24 @@
+nav {
+  height: 120px;
+  width: 100%;
+  z-index: 7;
+  background-color: #720b6f;
+  color: #ffffff;
+  font-family: 'Indie Flower', cursive, 'sans-serif';
+  position: fixed;
+}
+
+span {
+  font-size: 3em;
+  margin-left: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+#write-nav {
+  font-size: 1.5em;
+  align-self: flex-start;
+  font-family: 'Indie Flower', cursive, 'sans-serif';
+  float: right;
+  margin-top: 0.5em;
+  margin-right: 0.5em;
+}

@@ -92,10 +92,17 @@ $(document).ready(function () {
       const $userTweet = $('#tweet-box');
       //Serialize gives a string
       const dataReceived = $('#tweet-form').serialize();
+      const $validationError = $('.validation');
+      const $errorMsg = $('.validation-msg');
+      $validationError.slideUp();
+      
       if ($userTweet.val().length >= 140) {
-        alert(`Your tweet is too long and can't be posted!`);
+        $validationError.slideDown();
+        $errorMsg.text(`Seems like you have a lot to say. How about only 140 words for now?`);
+
       } else if ($userTweet.val().length === 0) {
-        alert(`Did you forget to type your tweet?`);
+        $validationError.slideDown();
+        $errorMsg.text(`Did you type anything?`);
       } else {
         //$.ajax(route, data, cb(){}); 
         $.post('/tweets', dataReceived, function (){

@@ -13,16 +13,24 @@
   opacity: 1;
 }
 
-#user-handler.show {
-  display: block;
+.tweet-container:hover #user-handler {
+  opacity: 1;
+}
+
+#user-handler {
+  margin-left: 42em;
+  margin-top: 1em;
+  float: right;
+  opacity: 0;
 }
 
 
- .tweet-header {
+.tweet-header {
   position: relative;
   height: 100px;
   width: 100px;
- }
+}
+
  .tweet-avatar {
    position: absolute;  
    float: left;
@@ -35,13 +43,6 @@
    margin-left: 3.5em; 
    position: absolute;
    margin-top: 1em;
- }
-
- #user-handler {
-  margin-left: 42em;
-  margin-top: 1em;
-  display: none;  
-  float: right;
  }
 
  #tweet-footer {

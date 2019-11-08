@@ -37,7 +37,7 @@ const escape =  function(str) {
 }
 
 
-const createTweetElement = function $(tweetObject) {
+const createTweetElement = function (tweetObject) {
   //using the escape function to get only the innerhtml of the user input and pass it into the p tag
   const $safeHtml = `<p id='tweet-text'>${escape(tweetObject.content.text)}</p>`;
   const markup =
@@ -61,7 +61,9 @@ ${$safeHtml}
 </footer>
     </article>`
 
+  
   return markup;
+
 }
 
 const renderTweets = function (tweets) {
@@ -69,6 +71,7 @@ const renderTweets = function (tweets) {
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
   const $tweetContainer = $('.all-tweets');
+  $tweetContainer.empty();
   for (const user of tweets) {
     $tweetContainer.prepend(createTweetElement(user));
   }
@@ -94,8 +97,9 @@ $(document).ready(function () {
       } else if ($userTweet.val().length === 0) {
         alert(`Did you forget to type your tweet?`);
       } else {
-        $('.all-tweets').empty();
+        //$.ajax(route, data, cb(){}); 
         $.post('/tweets', dataReceived, function (){
+          // TODO: clear text area I guess?
           loadTweets();
         });
       }

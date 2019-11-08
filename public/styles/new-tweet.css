@@ -19,6 +19,7 @@ h2 {
   /* removes the little resize feature  */
   resize: none; 
   overflow: auto;
+  outline: none;
 }
 
 #counter-btn {

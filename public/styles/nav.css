@@ -1,4 +1,4 @@
-nav {
+#nav-div {
   height: 120px;
   width: 100%;
   z-index: 7;
@@ -6,6 +6,17 @@ nav {
   color: #ffffff;
   font-family: 'Indie Flower', cursive, 'sans-serif';
   position: fixed;
+  justify-content: space-between;
+  display: flex;
+}
+
+#compose-arrow {
+  height: auto;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
 
 span {
@@ -16,9 +27,34 @@ span {
 
 #write-nav {
   font-size: 1.5em;
-  align-self: flex-start;
   font-family: 'Indie Flower', cursive, 'sans-serif';
-  float: right;
-  margin-top: 0.5em;
-  margin-right: 0.5em;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+
+@keyframes bounce {
+  0% {transform: translateY(0);}
+  /* 25% {transform: translateY(7px);} */
+  50% {transform: translateY(10px);}  
+  /* 75% {transform: translateY(7px);} */
+  100% {transform: translateY(0);}
+}
+
+.bounce {
+  animation: bounce 1s infinite;
+}
+
+#arrow-button { 
+  background-color: transparent;
+  border: none;
+  margin: 0 auto;
+}
+
+#arrow-button:hover {
+  cursor: pointer;
+}
+
+#arrow-pic {
+  color: white;
 }

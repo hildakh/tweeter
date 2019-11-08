@@ -30,7 +30,7 @@
 // ]
 
 //To escape the script tweets that could be sent by users and wipe the innerhtml
-const escape =  function(str) {
+const escape = function (str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -61,7 +61,7 @@ ${$safeHtml}
 </footer>
     </article>`
 
-  
+
   return markup;
 
 }
@@ -89,28 +89,32 @@ $(document).ready(function () {
   $('#tweet-form').submit(function (event) {
     event.preventDefault();
 
-      const $userTweet = $('#tweet-box');
-      //Serialize gives a string
-      const dataReceived = $('#tweet-form').serialize();
-      const $validationError = $('.validation');
-      const $errorMsg = $('.validation-msg');
-      $validationError.slideUp();
+    const $userTweet = $('#tweet-box');
+    //Serialize gives a string
+    const dataReceived = $('#tweet-form').serialize();
+    const $validationError = $('.validation');
+    const $errorMsg = $('.validation-msg');
+    $validationError.slideUp();
 
-      if ($userTweet.val().length >= 140) {
-        $validationError.slideDown();
-        $errorMsg.text(`Seems like you have a lot to say. How about only 140 words for now?`);
+    if ($userTweet.val().length >= 140) {
+      $validationError.slideDown();
+      $errorMsg.text(`Seems like you have a lot to say. How about only 140 words for now?`);
 
-      } else if ($userTweet.val().length === 0) {
-        $validationError.slideDown();
-        $errorMsg.text(`Did you type anything?`);
-      } else {
-        //$.ajax(route, data, cb(){}); 
-        $.post('/tweets', dataReceived, function (){
-          // TODO: clear text area I guess?
-          loadTweets();
-        });
-        $('#tweet-form').trigger('reset');
-      }
-    });
+    } else if ($userTweet.val().length === 0) {
+      $validationError.slideDown();
+      $errorMsg.text(`Did you type anything?`);
+    } else {
+      //$.ajax(route, data, cb(){}); 
+      $.post('/tweets', dataReceived, function () {
+        // TODO: clear text area I guess?
+        loadTweets();
+      });
+      $('#tweet-form').trigger('reset');
+      $('#counter-btn').text(140);
+      $('#tweet-box').focus();
+    }
   });
+
+
+});
 

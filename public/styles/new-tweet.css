@@ -13,7 +13,6 @@ h2 {
   margin: 0 auto;
   border-radius: 25px;
   border: none;
-  /* border-bottom: 100%; */
   font-family: 'Indie Flower', cursive, 'sans-serif';
   padding: 0.5em;
   /* removes the little resize feature  */
@@ -50,3 +49,18 @@ p {
   margin-top: 0.5em;
 }
 
+.validation {
+   border: 2px solid red;
+   width: 60%;
+   margin: 0 auto;
+   padding: 10px;
+}
+.validation-msg {
+  font-size: 1rem;
+  color: red;
+
+}
+
+.alert-icon {
+  color: red;
+}

@@ -20,9 +20,6 @@ and toggles this opacity feature when the container is hovered */
 }
 
 #user-handle {
-  margin-left: 42em;
-  margin-top: 1em;
-  float: right;
   opacity: 0;
 }
 
@@ -31,6 +28,9 @@ and toggles this opacity feature when the container is hovered */
   position: relative;
   height: 100px;
   width: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
  .tweet-avatar {
@@ -42,9 +42,7 @@ and toggles this opacity feature when the container is hovered */
  }
 
  #user-name {
-   margin-left: 3.5em; 
    position: absolute;
-   margin-top: 1em;
  }
 
  #tweet-footer {

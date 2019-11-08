@@ -95,7 +95,7 @@ $(document).ready(function () {
       const $validationError = $('.validation');
       const $errorMsg = $('.validation-msg');
       $validationError.slideUp();
-      
+
       if ($userTweet.val().length >= 140) {
         $validationError.slideDown();
         $errorMsg.text(`Seems like you have a lot to say. How about only 140 words for now?`);
@@ -109,6 +109,7 @@ $(document).ready(function () {
           // TODO: clear text area I guess?
           loadTweets();
         });
+        $('#tweet-form').trigger('reset');
       }
     });
   });

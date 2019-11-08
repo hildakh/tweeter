@@ -49,12 +49,6 @@ p {
   margin-top: 0.5em;
 }
 
-.validation {
-   border: 2px solid red;
-   width: 60%;
-   margin: 0 auto;
-   padding: 10px;
-}
 .validation-msg {
   font-size: 1rem;
   color: red;
@@ -63,4 +57,14 @@ p {
 
 .alert-icon {
   color: red;
+}
+
+.validation {
+  border: 2px solid red;
+  border-radius: 20px; 
+  width: 60%;
+  margin: 0 auto;
+  padding: 10px;
+  display: none;
+  text-align: center;
 }

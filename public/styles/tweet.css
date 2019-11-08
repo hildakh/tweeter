@@ -13,6 +13,8 @@
   opacity: 1;
 }
 
+/* aims at any descendant of the .tweet-container tag with an id of user-handler 
+and toggles this opacity feature when the container is hovered */
 .tweet-container:hover #user-handler {
   opacity: 1;
 }

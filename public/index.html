@@ -27,10 +27,19 @@
 
 <body>
   <!-- Top nav bar (fixed) -->
-  <nav>
-    <span>tweeter</span>
-    <span id="write-nav">Write a new tweet</span>
+  <nav id="nav-div">
+
+    <div >
+      <span>tweeter</span>
+    </div>
+
+    <div id='compose-arrow'>
+      <span id="write-nav"><strong>Write</strong> a new tweet</span>
+      <button id="arrow-button" class="bounce"> <i class="fas fa-angle-double-down" id="arrow-pic" ></i></button>
+    </div>
+
   </nav>
+
   <header id="header-back">
     <div>
       <img src="/images/profile-hex.png" class="avatar">
@@ -73,6 +82,7 @@
   </main>
   <script src="scripts/composer-char-counter.js"></script>
   <script src="scripts/user-handler.js"></script>
+  <script src="scripts/tweet-toggle.js"></script>
 </body>
 
 </html>

@@ -2,8 +2,10 @@ $(document).ready(function () {
   $('#arrow-button').click(function () {
     $('.new-tweet').toggle();
     $('#tweet-box').focus();
-    //ask about slideToggle later
-    // $('.new-tweet').slideToggle(800);
   });
+
+  //fix the time stamp using timeago plugin from jquery
+  // $('.time-stamp').text(timeago());
+
 
 });

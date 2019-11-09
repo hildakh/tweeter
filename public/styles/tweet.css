@@ -52,7 +52,7 @@ and toggles this opacity feature when the container is hovered */
   display: block;
  }
 
- #tweet-text {
+ .tweet-text {
    text-align: left;
    margin-left: 1em;
    height: 130px;

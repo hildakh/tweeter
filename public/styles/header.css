@@ -15,10 +15,14 @@ header {
 .name {
   font-family: "Indie Flower", cursive, "sans-serif";
   text-align: center;
+  color: white;
+  font-size: 35px;
 }
 
 #header-back {
   background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
-  background-color: #edc2ea;
+  background-color: #cc60bc;
   position: absolute;
 }
+
+

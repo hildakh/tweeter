@@ -51,7 +51,7 @@ const createTweetElement = function (tweetObject) {
     
 ${$safeHtml}
   
-    <footer id="tweet-footer">
+    <footer class="tweet-footer">
   <div id="icons">
     <i class="fas fa-flag"></i>
     <i class="fas fa-retweet"></i>

@@ -64,7 +64,7 @@ and toggles this opacity feature when the container is hovered */
   top: 5px;
   color: #4B0082;
  }
- #time-stamp {
+ .time-stamp {
    float: left;
    margin-top: 5px;
  }

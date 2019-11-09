@@ -5,6 +5,7 @@
  */
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -19,19 +20,15 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Indie Flower', cursive, 'sans-serif';
-  position: relative;
+  height: auto;
 }
   
- main {
-  width: 50%;
+.container {
   background-color: #f4f1ec;
+  margin-top: 5rem;
+  margin-right: 20px;
   float: right;
- }
- .container {
-   float: right;
-   width: 50%;
-  position: absolute;
-  top: 520px;
-  margin-left: 4%;
+  width: 60%;
+  height: auto;
 }
 

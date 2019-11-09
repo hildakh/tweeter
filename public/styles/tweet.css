@@ -59,7 +59,7 @@ and toggles this opacity feature when the container is hovered */
    font-size: 1.2em;
  }
 
-#icons i {
+.icons i {
   position: relative;
   top: 5px;
   color: #4B0082;
@@ -68,7 +68,7 @@ and toggles this opacity feature when the container is hovered */
    float: left;
    margin-top: 5px;
  }
- #icons {
+ .icons {
    float:right;
  }
  

@@ -7,67 +7,62 @@
   opacity: 0.5;
 }
 
+.tweet-header {
+  height: 100px;
+  width: 100%;
+}
+
+.tweet-avatar { 
+  float: left; 
+  margin-left: 0.6rem;
+  margin-top: 0.5rem;  
+  /* width: fit-content; */
+}
+
+.user-name {
+  float: left;
+  margin-left: 0.5rem;
+}
+
+.user-handle {
+  opacity: 0;
+  float: right;
+  margin-right: 0.5rem;
+}
+
+.tweet-text {
+  margin-left: 1em;
+  height: 80px;
+  font-size: 1.2rem;
+}
+
+.tweet-footer {
+  border-top: 2px solid black;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.icons {  
+  color: #4B0082;
+  opacity: 0;
+  float: right;
+}
+
+.time-stamp {
+   float: left;
+   margin-top: 5px;
+}
+
 .tweet-container:hover {
   box-shadow: 5px 5px #4B0082;
   opacity: 1;
 }
-
 /* aims at any descendant of the .tweet-container tag with an id of user-handle
 and toggles this opacity feature when the container is hovered */
 .tweet-container:hover .user-handle {
   opacity: 1;
 }
 
-.user-handle {
-  opacity: 0;
-}
-
-.tweet-header {
-  height: 100px;
-  width: 100%;
-}
-
- .tweet-avatar { 
-  float: left;
-  margin-left: 0.5em; 
-  width: fit-content;
- }
-
- .user-name {
-    float: left;
- }
-
- .tweet-footer {
-  border-top: 2px solid black;
-  margin-right: 1em;
-  margin-left: 1em;
-  display: block;
- }
-
- .tweet-text {
-   text-align: left;
-   margin-left: 1em;
-   height: 130px;
-   font-size: 1.2em;
- }
-
-.icons {
-  position: relative;
-  top: 5px;
-  color: #4B0082;
-  opacity: 0;
-  float: right;
- }
-
 .tweet-container:hover .icons {
   opacity: 1;
 }
-
- .time-stamp {
-   float: left;
-   margin-top: 5px;
- }
- /* .icons {
-   float:right;
- } */
- 

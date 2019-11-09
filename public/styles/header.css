@@ -2,28 +2,23 @@ header {
   height: 400px;
   display: flex;
   flex-direction: column;
-  top: 120px;
+  top: 200px;
+  left: 30px;
+  width: 35%;
 }
 
 .avatar {
-  font-family: "Indie Flower", cursive, "sans-serif";
-  margin-right: auto;
-  margin-left: auto;
   display: block;
-  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
 }
 .name {
   font-family: "Indie Flower", cursive, "sans-serif";
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
   text-align: center;
 }
+
 #header-back {
   background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
   background-color: #edc2ea;
-  margin-top: 0%;
   position: absolute;
-  top: 120px;
-  justify-content: center;
 }

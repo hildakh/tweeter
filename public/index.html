@@ -1,80 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Meta Information -->
+    <title>Tweeter - Home Page</title>
 
-<head>
-  <!-- Meta Information -->
-  <title>Tweeter - Home Page</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700i&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700i&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
-  <!-- App CSS -->
-  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+    <!-- External JS -->
+    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <!-- Required for tweeter box icons -->
+    <script
+      src="https://kit.fontawesome.com/3310f83d3a.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- External JS -->
-  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-  <!-- Required for tweeter box icons -->
-  <script src="https://kit.fontawesome.com/3310f83d3a.js" crossorigin="anonymous"></script>
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/client.js"></script>
+  </head>
 
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
-</head>
+  <body>
+    <!-- Top nav bar (fixed) -->
+    <nav id="nav-div">
+      <div>
+        <span>tweeter</span>
+      </div>
 
-<body>
-  <!-- Top nav bar (fixed) -->
-  <nav id="nav-div">
-    <div>
-      <span>tweeter</span>
-    </div>
+      <div id="compose-arrow">
+        <span id="write-nav"><strong>Write</strong> a new tweet</span>
+        <button id="arrow-button" class="bounce">
+          <i class="fas fa-angle-double-down" id="arrow-pic"></i>
+        </button>
+      </div>
+    </nav>
 
-    <div id='compose-arrow'>
-      <span id="write-nav"><strong>Write</strong> a new tweet</span>
-      <button id="arrow-button" class="bounce"> <i class="fas fa-angle-double-down" id="arrow-pic"></i></button>
-    </div>
-
-  </nav>
-
-  <header id="header-back">
-    <div >
-      <img src="/images/profile-hex.png" class="avatar">
-    </div>
-    <div>
-      <h2 class="name">Hili Joon</h2>
-    </div>
-  </header>
-  <!-- Page-specific (main) content here -->
-  <main class="container">
+    <header id="header-back">
+      <div>
+        <img src="/images/profile-hex.png" class="avatar" />
+      </div>
+      <div>
+        <h2 class="name">Hili Joon</h2>
+      </div>
+    </header>
+    <!-- Page-specific (main) content here -->
+    <main class="container">
       <div class="validation">
-          <i class="fas fa-exclamation-triangle alert-icon"></i>
-          <span class="validation-msg">
-            
-          </span>
-          <i class="fas fa-exclamation-triangle alert-icon"></i>
-  
-        </div>
-    <section class="new-tweet">
+        <i class="fas fa-exclamation-triangle alert-icon"></i>
+        <span class="validation-msg"> </span>
+        <i class="fas fa-exclamation-triangle alert-icon"></i>
+      </div>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets" id="tweet-form">
+          <textarea
+            id="tweet-box"
+            name="text"
+            placeholder="What are you humming about?"
+          ></textarea>
+          <input type="submit" value="Tweet" class="button" />
+          <span id="counter-btn">140</span>
+        </form>
+      </section>
 
-      <h2>Compose Tweet</h2>
-      <form method="POST" action="/tweets" id="tweet-form">
-        <textarea id="tweet-box" name="text" placeholder="What are you humming about?"></textarea>
-        <input type="submit" value="Tweet" class="button">
-        <span id="counter-btn">140</span>
-      </form>
-    </section>
-
-    <article class="all-tweets">
-
-    </article>
-
-  </main>
-  <script src="scripts/composer-char-counter.js"></script>
-  <script src="scripts/user-handle.js"></script>
-  <script src="scripts/tweet-toggle.js"></script>
-</body>
-
+      <article class="all-tweets"></article>
+    </main>
+    <script src="scripts/composer-char-counter.js"></script>
+    <script src="scripts/user-handle.js"></script>
+    <script src="scripts/tweet-toggle.js"></script>
+  </body>
 </html>

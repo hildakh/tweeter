@@ -3,31 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "This is just to see what we can see here! Alors, on va jeter un coup d'oeil et decider quoi faire ensuite 🤪"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@willie"
-//     },
-//     "content": {
-//       "text": "Je pense , donc je suis!"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ]
 
 //To escape the script tweets that could be sent by users and wipe the innerhtml
 const escape = function (str) {
@@ -36,18 +11,18 @@ const escape = function (str) {
   return div.innerHTML;
 }
 
-
 const createTweetElement = function (tweetObject) {
   //using the escape function to get only the innerhtml of the user input and pass it into the p tag
   const $safeHtml = `<p class='tweet-text'>${escape(tweetObject.content.text)}</p>`;
   const markup =
+
     `<article class="tweet-container">
-  <header class="tweet-header">
+  <div class="tweet-header">
 
   <img src="${tweetObject.user.avatars}" alt="girl-avatar" class="tweet-avatar">
   <p class="user-name">${tweetObject.user.name}</p>
   <p class="user-handle">${tweetObject.user.handle}</p>
-  </header>
+  </div>
     
 ${$safeHtml}
   
@@ -114,7 +89,5 @@ $(document).ready(function () {
       $('#tweet-box').focus();
     }
   });
-
-
 });
 

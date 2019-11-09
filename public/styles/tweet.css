@@ -15,11 +15,11 @@
 
 /* aims at any descendant of the .tweet-container tag with an id of user-handle
 and toggles this opacity feature when the container is hovered */
-.tweet-container:hover #user-handle {
+.tweet-container:hover .user-handle {
   opacity: 1;
 }
 
-#user-handle {
+.user-handle {
   opacity: 0;
 }
 

@@ -2,14 +2,13 @@ h2 {
   font-family: "Indie Flower", cursive, "sans-serif";
 }
 .new-tweet {
-  margin: 0 auto;
   border-bottom: 2em;
   height: 300px;
   text-align: center;
   display: none;
 }
 #tweet-box {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   border-radius: 25px;
   border: none;
@@ -22,11 +21,10 @@ h2 {
 }
 
 #counter-btn {
-  text-align: right;
   font-family: "Indie Flower", cursive, "sans-serif";
   float: right;
-  margin-right: 5%;
-  font-size: 2.5em;
+  font-size: 50px;
+  margin-right: 25px;
 }
 
 .red {
@@ -35,13 +33,13 @@ h2 {
 
 .button {
   background-color: #4b0082;
-  font-size: 1.3em;
+  font-size: 30px;
   color: white;
-  border-radius: 25px;
-  margin-left: 5%;
-  padding: 0.5em;
+  border-radius: 20px;
+  padding: 10px;
   font-family: "Indie Flower", cursive, "sans-serif";
   margin-top: 0.5em;
+  margin-left: 25px;
   float: left;
 }
 

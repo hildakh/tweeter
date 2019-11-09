@@ -4,7 +4,7 @@
   z-index: 7;
   background-color: #720b6f;
   color: #ffffff;
-  font-family: 'Indie Flower', cursive, 'sans-serif';
+  font-family: "Indie Flower", cursive, "sans-serif";
   position: fixed;
   justify-content: space-between;
   display: flex;
@@ -16,7 +16,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 span {
@@ -27,25 +26,30 @@ span {
 
 #write-nav {
   font-size: 1.5em;
-  font-family: 'Indie Flower', cursive, 'sans-serif';
+  font-family: "Indie Flower", cursive, "sans-serif";
   margin: 0 auto;
   margin-top: 10px;
 }
 
-
 @keyframes bounce {
-  0% {transform: translateY(0);}
+  0% {
+    transform: translateY(0);
+  }
   /* 25% {transform: translateY(7px);} */
-  50% {transform: translateY(10px);}  
+  50% {
+    transform: translateY(10px);
+  }
   /* 75% {transform: translateY(7px);} */
-  100% {transform: translateY(0);}
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .bounce {
   animation: bounce 1s infinite;
 }
 
-#arrow-button { 
+#arrow-button {
   background-color: transparent;
   border: none;
   margin: 0 auto;

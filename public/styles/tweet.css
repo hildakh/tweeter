@@ -45,7 +45,7 @@ and toggles this opacity feature when the container is hovered */
    position: absolute;
  }
 
- #tweet-footer {
+ .tweet-footer {
   border-top: 2px solid black;
   margin-right: 1em;
   margin-left: 1em;

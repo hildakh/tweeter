@@ -71,7 +71,7 @@ $(document).ready(function() {
     if ($userTweet.val().length >= 140) {
       $validationError.slideDown();
       $errorMsg.text(
-        `Seems like you have a lot to say. How about only 140 words for now?`
+        `Seems like you have a lot to say! Let's just use 140 characters for now, eh?`
       );
     } else if ($userTweet.val().length === 0) {
       $validationError.slideDown();

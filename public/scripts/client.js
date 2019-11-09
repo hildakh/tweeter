@@ -57,7 +57,7 @@ ${$safeHtml}
     <i class="fas fa-retweet"></i>
     <i class="fas fa-heart"></i>
   </div>
-  <p id="time-stamp">${tweetObject.created_at}</p>
+  <p class="time-stamp">${tweetObject.created_at}</p>
 </footer>
     </article>`
 

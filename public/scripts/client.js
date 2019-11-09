@@ -39,7 +39,7 @@ const escape = function (str) {
 
 const createTweetElement = function (tweetObject) {
   //using the escape function to get only the innerhtml of the user input and pass it into the p tag
-  const $safeHtml = `<p id='tweet-text'>${escape(tweetObject.content.text)}</p>`;
+  const $safeHtml = `<p class='tweet-text'>${escape(tweetObject.content.text)}</p>`;
   const markup =
     `<article class="tweet-container">
   <header class="tweet-header">

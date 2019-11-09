@@ -32,7 +32,7 @@ ${$safeHtml}
     <i class="fas fa-retweet"></i>
     <i class="fas fa-heart"></i>
   </div>
-  <p class="time-stamp">${tweetObject.created_at}</p>
+  <p class="time-stamp">${moment(tweetObject.created_at).fromNow()}</p>
 </footer>
     </article>`;
 

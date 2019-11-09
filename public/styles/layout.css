@@ -7,7 +7,9 @@ html {
   box-sizing: border-box;
   height: 100%;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -19,10 +21,10 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Indie Flower', cursive, 'sans-serif';
+  font-family: "Indie Flower", cursive, "sans-serif";
   height: auto;
 }
-  
+
 .container {
   background-color: #f4f1ec;
   margin-top: 5rem;
@@ -31,4 +33,3 @@ body {
   width: 60%;
   height: auto;
 }
-

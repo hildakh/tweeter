@@ -12,10 +12,10 @@
   width: 100%;
 }
 
-.tweet-avatar { 
-  float: left; 
+.tweet-avatar {
+  float: left;
   margin-left: 0.6rem;
-  margin-top: 0.5rem;  
+  margin-top: 0.5rem;
   /* width: fit-content; */
 }
 
@@ -42,19 +42,19 @@
   margin-left: 1rem;
 }
 
-.icons {  
-  color: #4B0082;
+.icons {
+  color: #4b0082;
   opacity: 0;
   float: right;
 }
 
 .time-stamp {
-   float: left;
-   margin-top: 5px;
+  float: left;
+  margin-top: 5px;
 }
 
 .tweet-container:hover {
-  box-shadow: 5px 5px #4B0082;
+  box-shadow: 5px 5px #4b0082;
   opacity: 1;
 }
 /* aims at any descendant of the .tweet-container tag with an id of user-handle

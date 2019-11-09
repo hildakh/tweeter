@@ -18,10 +18,9 @@
   align-items: center;
 }
 
-span {
-  font-size: 3em;
-  margin-left: 0.5em;
-  margin-bottom: 1.5em;
+.app-name {
+  font-size: 60px;
+  margin-left: 20px; 
 }
 
 #write-nav {
@@ -61,4 +60,27 @@ span {
 
 #arrow-pic {
   color: white;
+}
+
+/* Mobile Styles */
+/* @media only screen and (max-width: 400px) {
+  body {
+    background-color: #F09A9D;
+  }
+} */
+
+/* Tablet Styles */
+/* @media only screen and (min-width: 401px) and (max-width: 960px) {
+  body {
+    background-color: #F5CF8E; 
+  }
+} */
+
+/* Desktop Styles */
+@media only screen and (max-width: 1024px) {
+
+  #nav-div {
+    background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
+    background-color: #cc60bc;
+  }
 }

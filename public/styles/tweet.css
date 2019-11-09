@@ -1,11 +1,10 @@
 .tweet-container {
-  border-style: solid;
-  border-color: black;
-  margin: 0 auto;
+  border: 2px solid black;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
   height: 300px;
-  position: relative;
   opacity: 0.5;
-  margin-top: 120px;
 }
 
 .tweet-container:hover {
@@ -23,26 +22,19 @@ and toggles this opacity feature when the container is hovered */
   opacity: 0;
 }
 
-
 .tweet-header {
-  position: relative;
   height: 100px;
-  width: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  width: 100%;
 }
 
- .tweet-avatar {
-   position: absolute;  
-   float: left;
-   margin-left: 0.5em;
-   width: fit-content;
-   margin-top: 0.5em;
+ .tweet-avatar { 
+  float: left;
+  margin-left: 0.5em; 
+  width: fit-content;
  }
 
  .user-name {
-   position: absolute;
+    float: left;
  }
 
  .tweet-footer {

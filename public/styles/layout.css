@@ -23,15 +23,13 @@ body {
 }
   
  main {
-  margin-left: 5%;
-  margin-right: 5%;
-  margin: 0 auto;
-  width: 90%;
+  width: 50%;
   background-color: #f4f1ec;
-  margin-top: 1em;
-  /* text-align: center; */
+  float: right;
  }
  .container {
+   float: right;
+   width: 50%;
   position: absolute;
   top: 520px;
   margin-left: 4%;

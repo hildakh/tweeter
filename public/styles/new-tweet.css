@@ -1,6 +1,5 @@
 h2 {
-  font-family: 'Indie Flower', cursive, 'sans-serif';
-  
+  font-family: "Indie Flower", cursive, "sans-serif";
 }
 .new-tweet {
   margin: 0 auto;
@@ -14,17 +13,17 @@ h2 {
   margin: 0 auto;
   border-radius: 25px;
   border: none;
-  font-family: 'Indie Flower', cursive, 'sans-serif';
+  font-family: "Indie Flower", cursive, "sans-serif";
   padding: 0.5em;
   /* removes the little resize feature  */
-  resize: none; 
+  resize: none;
   overflow: auto;
   outline: none;
 }
 
 #counter-btn {
   text-align: right;
-  font-family: 'Indie Flower', cursive, 'sans-serif';
+  font-family: "Indie Flower", cursive, "sans-serif";
   float: right;
   margin-right: 5%;
   font-size: 2.5em;
@@ -35,13 +34,13 @@ h2 {
 }
 
 .button {
-  background-color: #4B0082;
+  background-color: #4b0082;
   font-size: 1.3em;
   color: white;
   border-radius: 25px;
   margin-left: 5%;
   padding: 0.5em;
-  font-family: 'Indie Flower', cursive, 'sans-serif';
+  font-family: "Indie Flower", cursive, "sans-serif";
   margin-top: 0.5em;
   float: left;
 }
@@ -49,7 +48,6 @@ h2 {
 .validation-msg {
   font-size: 1rem;
   color: red;
-
 }
 
 .alert-icon {
@@ -58,7 +56,7 @@ h2 {
 
 .validation {
   border: 2px solid red;
-  border-radius: 20px; 
+  border-radius: 20px;
   width: 100%;
   margin-top: 1rem;
   padding: 10px;

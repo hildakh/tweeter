@@ -6,24 +6,24 @@ header {
 }
 
 .avatar {
-  font-family: 'Indie Flower', cursive, 'sans-serif';
+  font-family: "Indie Flower", cursive, "sans-serif";
   margin-right: auto;
-  margin-left: auto; 
+  margin-left: auto;
   display: block;
   text-align: center;
 }
 .name {
-  font-family: 'Indie Flower', cursive, 'sans-serif';
+  font-family: "Indie Flower", cursive, "sans-serif";
   margin-right: auto;
-  margin-left: auto; 
+  margin-left: auto;
   display: block;
   text-align: center;
 }
 #header-back {
-  background-image: url('https://www.transparenttextures.com/patterns/light-wool.png');
+  background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
   background-color: #edc2ea;
   margin-top: 0%;
-  position: absolute; 
+  position: absolute;
   top: 120px;
   justify-content: center;
 }

@@ -41,7 +41,7 @@ and toggles this opacity feature when the container is hovered */
    margin-top: 0.5em;
  }
 
- #user-name {
+ .user-name {
    position: absolute;
  }
 

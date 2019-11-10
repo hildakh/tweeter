@@ -10,7 +10,8 @@ const escape = function(str) {
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
-
+//creates tweets with the input from user and random avatars, usernames and user handles created
+//in the user-helper.js
 const createTweetElement = function(tweetObject) {
   //using the escape function to get only the innerhtml of the user input and pass it into the p tag
   const $safeHtml = `<p class='tweet-text'>${escape(
@@ -59,13 +60,16 @@ const loadTweets = function() {
 $(document).ready(function() {
   loadTweets();
   $("#tweet-form").submit(function(event) {
+    //prevents the default page refresh every time the form is submitted
     event.preventDefault();
 
     const $userTweet = $("#tweet-box");
     //Serialize gives a string
     const dataReceived = $("#tweet-form").serialize();
+    //validation is to check the length of the tweet
     const $validationError = $(".validation");
     const $errorMsg = $(".validation-msg");
+    //validation error slides up on page load to only be called to slide down in case of a tweet length problem
     $validationError.slideUp();
 
     if ($userTweet.val().length >= 140) {
@@ -77,13 +81,15 @@ $(document).ready(function() {
       $validationError.slideDown();
       $errorMsg.text(`Did you type anything?`);
     } else {
-      //$.ajax(route, data, cb(){});
+      //$.ajax(route, data, cb(){}) is another syntax for this
       $.post("/tweets", dataReceived, function() {
-        // TODO: clear text area I guess?
         loadTweets();
       });
+      //Once the new tweet is posted the text-area is cleared
       $("#tweet-form").trigger("reset");
+      //The counter is reset to 140 after each tweet post
       $("#counter-btn").text(140);
+      //The text area is type ready after each tweet post
       $("#tweet-box").focus();
     }
   });

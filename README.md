@@ -5,10 +5,12 @@ Tweeter is a simple, single-page Twitter clone.
 This starter code was a fork of Lighthouse Labs Tweeter. I have implemented my knowledge of HTML, CSS, JS, jQuery and AJAX front-end skills, along with Node, Express and MongoDB back-end skills to build this app. Enjoy!
 
 ## Screenshots
-
+###### First look at the app
 !['First look at the app'](https://github.com/hildakh/tweeter/blob/master/docs/first-look.jpeg?raw=true)
-
+###### Toggled tweet box and character counter
 !['Toggled tweet box and character counter'](https://github.com/hildakh/tweeter/blob/master/docs/composebox-counter.jpeg?raw=true)
+###### tablet mode interface and box hover features
+!['tablet mode interface and box hover features'](https://github.com/hildakh/tweeter/blob/master/docs/hover-tablet.jpg?raw=true)
 
 ## Getting Started
 

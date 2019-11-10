@@ -6,7 +6,9 @@ This starter code was a fork of Lighthouse Labs Tweeter. I have implemented my k
 
 ## Screenshots
 
-![First look at the app](https://github.com/hildakh/tweeter/blob/master/docs/first-look.jpeg?raw=true)
+!['First look at the app'](https://github.com/hildakh/tweeter/blob/master/docs/first-look.jpeg?raw=true)
+
+!['Toggled tweet box and character counter'](https://github.com/hildakh/tweeter/blob/master/docs/composebox-counter.jpeg?raw=true)
 
 ## Getting Started
 

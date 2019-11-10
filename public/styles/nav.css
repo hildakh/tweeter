@@ -66,4 +66,8 @@
     background-color: #cc60bc;
     height: 100px;
   }
+
+  #arrow-button {
+    margin-top: -10px;
+  }
 }

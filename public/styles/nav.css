@@ -1,4 +1,4 @@
-#nav-div {
+.nav-div {
   height: 120px;
   width: 100%;
   z-index: 7;
@@ -8,37 +8,34 @@
   position: fixed;
   justify-content: space-between;
   display: flex;
+  padding: 15px;
+  top: 0px;
 }
 
-#compose-arrow {
-  height: auto;
-  width: 300px;
+#compose {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .app-name {
-  font-size: 60px;
-  margin-left: 20px; 
+  font-size: 45px;
+  font-weight: bold;
 }
 
 #write-nav {
-  font-size: 1.5em;
+  font-size: 35px;
   font-family: "Indie Flower", cursive, "sans-serif";
-  margin: 0 auto;
-  margin-top: 10px;
 }
 
 @keyframes bounce {
   0% {
     transform: translateY(0);
   }
-  /* 25% {transform: translateY(7px);} */
+
   50% {
     transform: translateY(10px);
   }
-  /* 75% {transform: translateY(7px);} */
+
   100% {
     transform: translateY(0);
   }
@@ -62,25 +59,11 @@
   color: white;
 }
 
-/* Mobile Styles */
-/* @media only screen and (max-width: 400px) {
-  body {
-    background-color: #F09A9D;
-  }
-} */
-
-/* Tablet Styles */
-/* @media only screen and (min-width: 401px) and (max-width: 960px) {
-  body {
-    background-color: #F5CF8E; 
-  }
-} */
-
 /* Desktop Styles */
 @media only screen and (max-width: 1024px) {
-
-  #nav-div {
+  .nav-div {
     background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
     background-color: #cc60bc;
+    height: 100px;
   }
 }

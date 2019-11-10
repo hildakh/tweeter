@@ -22,22 +22,22 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: "Indie Flower", cursive, "sans-serif";
-  height: auto;
+  /* height: auto; */
 }
 
 .container {
   background-color: #f4f1ec;
-  margin-top: 120px;
   margin-right: 20px;
   float: right;
   width: 55%;
   height: auto;
+  margin-top: -420px;
 }
 
 @media only screen and (max-width: 1024px) {
 .container {
   width: 90%;
   margin-right: 40px;
-  margin-top: 500px;
+  margin-top: 0px;
 }
 }

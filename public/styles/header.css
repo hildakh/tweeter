@@ -1,16 +1,15 @@
 header {
   height: 400px;
-  display: flex;
-  flex-direction: column;
-  top: 200px;
-  left: 30px;
   width: 35%;
+  top: 120px;
+  margin-top: 160px;
+  margin-left: 40px;
 }
 
 .avatar {
   display: block;
   margin: 0 auto;
-  padding: 20px;
+  padding: 25px;
 }
 .name {
   font-family: "Indie Flower", cursive, "sans-serif";
@@ -19,21 +18,21 @@ header {
   font-size: 35px;
 }
 
-#header-back {
+.header-back {
   background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
   background-color: #cc60bc;
-  position: absolute;
 }
 
 @media only screen and (max-width: 1024px) {
   header {
     width: 100%;
-    top: 100px;
-    height: 350px;
+    height: 400px;
+    margin-left: 0px;
+    margin-top: 50px;
   }
 
   .avatar {
-    padding-top: 20px;
+    padding-top: 50px;
     margin-bottom: 0px;
   }
   .name {

@@ -35,9 +35,9 @@ body {
 }
 
 @media only screen and (max-width: 1024px) {
-.container {
-  width: 90%;
-  margin-right: 40px;
-  margin-top: 0px;
-}
+  .container {
+    width: 90%;
+    margin-right: 40px;
+    margin-top: 0px;
+  }
 }
